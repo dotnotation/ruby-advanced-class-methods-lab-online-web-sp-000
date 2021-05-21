@@ -45,13 +45,8 @@ class Song
   def self.new_from_filename(filename)
     artist_name, song_name = filename.split(" - ")
     song = self.new_by_name(song_name.gsub(".mp3", ""))
-    #binding pry
-    #song.artist_name = artist_name[0]
-    #song.name = name[1]
-    
-    #separate the artist name from song
-    #remove mp3 from song
-    #return song instance - mp3
+    song.artist_name = artist_name
+    song
   end
 
   def self.create_from_filename
